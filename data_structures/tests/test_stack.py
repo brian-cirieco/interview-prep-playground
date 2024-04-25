@@ -1,6 +1,5 @@
 import unittest
-
-from stack import Stack
+from data_structures.stack import Stack
 
 test_values = [1, 2, 3, 4, 5]
 

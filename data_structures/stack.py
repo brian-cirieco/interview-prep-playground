@@ -1,10 +1,5 @@
 from typing import Union, List
-
-class Node:
-
-    def __init__(self, value: int):
-        self.val = value
-        self.next = None
+from .node import Node
 
 class Stack:
 
@@ -37,21 +32,3 @@ class Stack:
             print(current.val)
             current = current.next
         print('\n')
-
-test_stack = Stack([1, 2, 3, 4, 5])
-
-test_stack.print()
-print(test_stack.pop())
-test_stack.print()
-print(test_stack.pop())
-test_stack.print()
-print(test_stack.pop())
-test_stack.print()
-print(test_stack.pop())
-test_stack.print()
-print(test_stack.pop())
-
-test_stack.print()
-
-test_stack.push(-1)
-test_stack.print()
