@@ -1,2 +1,2 @@
 # interview-prep-playground
-Playground for practicing Data Structure implementations and algorithms
+Playground for practicing in code interviews
