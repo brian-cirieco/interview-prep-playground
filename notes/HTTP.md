@@ -24,3 +24,21 @@ The `PATCH` method applies __partial__ modifications to a resource.
 ### `DELETE`
 
 The `DELETE` method deletes the specified resource.
+
+## Less Common Methods
+
+### `HEAD`
+
+The `HEAD` method asks for a response identical to a `GET` request, but without the response body.
+
+### `CONNECT`
+
+The `CONNECT` method establishes a tunnel to a server identified by the target resource.
+
+### `OPTIONS`
+
+The `OPTIONS` method describes the communication options for the target resource.
+
+### `TRACE`
+
+The `TRACE` method performs a message loop-back test along the path to the target resource.
