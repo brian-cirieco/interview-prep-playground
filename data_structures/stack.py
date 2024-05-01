@@ -3,21 +3,18 @@ from .node import Node
 
 class Stack:
 
-    def __init__(self, values: List[int] = None):
+    def __init__(self):
         self.head = None
-        
-        if not values or len(values) is 0:
-            return
-        
-        for val in values:
-            self.push(val)
     
     def push(self, value: int) -> None:
+        """appends value at tail of stack"""
         node = Node(value)
         node.next = self.head
         self.head = node
-
+    
     def pop(self) -> Union[int, None]:
+        """removes and returns last element of stack"""
+
         if not self.head:
             return None
         
@@ -25,10 +22,19 @@ class Stack:
         self.head = self.head.next
         return val
     
-    def print(self) -> None:
+    def as_list(self) -> List[int]:
+        """copies values of stack and returns list"""
+
         current = self.head
+        values = []
 
         while current:
-            print(current.val)
+            values.append(current.val)
             current = current.next
-        print('\n')
+
+        values.reverse()
+        return values
+
+    def print(self) -> None:
+        """prints values"""
+        print(self.as_list())

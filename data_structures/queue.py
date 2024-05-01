@@ -4,16 +4,10 @@ from .node import Node
 class Queue:
     """Queue data structure of variable size."""
 
-    def __init__(self, values: List[int] = None):
+    def __init__(self):
 
         self.head: Node = None
         self.tail: Node = None
-
-        if values is None or len(values) == 0:
-            return
-        
-        for val in values:
-            self.push(val)
 
     def push(self, val):
 
@@ -27,9 +21,13 @@ class Queue:
 
     def pop(self):
         if self.head is None:
-            return
+            print("Queue is empty")
+            return None
+        
         val = self.head.val
         self.head = self.head.next
+        if self.head is None:
+            self.tail = None
         return val
     
     def print(self):
